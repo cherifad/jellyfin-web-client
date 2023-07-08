@@ -1,0 +1,798 @@
+{
+  "Name": "The Mist",
+  "OriginalTitle": "The Mist",
+  "ServerId": "e75d3bc2ec0c43e6bc0eecb752629d4c",
+  "Id": "86b63e3c92eed2d9143848f3892ce15b",
+  "Etag": "94f5dab3566be6013d6a89ab63312cbb",
+  "DateCreated": "2023-07-03T18:04:35.0000000Z",
+  "CanDelete": false,
+  "CanDownload": true,
+  "HasSubtitles": true,
+  "Container": "mkv,webm",
+  "SortName": "mist",
+  "PremiereDate": "2007-11-21T00:00:00.0000000Z",
+  "ExternalUrls": [
+    { "Name": "IMDb", "Url": "https://www.imdb.com/title/tt0884328" },
+    { "Name": "TheMovieDb", "Url": "https://www.themoviedb.org/movie/5876" },
+    { "Name": "Trakt", "Url": "https://trakt.tv/movies/tt0884328" }
+  ],
+  "MediaSources": [
+    {
+      "Protocol": "File",
+      "Id": "86b63e3c92eed2d9143848f3892ce15b",
+      "Path": "/data/movies/The Mist (2007)/The Mist (2007).mkv",
+      "Type": "Default",
+      "Container": "mkv",
+      "Size": 3479084288,
+      "Name": "The Mist (2007)",
+      "IsRemote": false,
+      "ETag": "eda6385ec2cb741e55b3f63b1ee0f510",
+      "RunTimeTicks": 75597561856,
+      "ReadAtNativeFramerate": false,
+      "IgnoreDts": false,
+      "IgnoreIndex": false,
+      "GenPtsInput": false,
+      "SupportsTranscoding": true,
+      "SupportsDirectStream": true,
+      "SupportsDirectPlay": true,
+      "IsInfiniteStream": false,
+      "RequiresOpening": false,
+      "RequiresClosing": false,
+      "RequiresLooping": false,
+      "SupportsProbing": true,
+      "VideoType": "VideoFile",
+      "MediaStreams": [
+        {
+          "Codec": "h264",
+          "Language": "eng",
+          "ColorSpace": "bt709",
+          "ColorTransfer": "bt709",
+          "ColorPrimaries": "bt709",
+          "TimeBase": "1/1000",
+          "Title": "The Mist - 1080p - x264 - LotusFlower",
+          "VideoRange": "SDR",
+          "VideoRangeType": "SDR",
+          "DisplayTitle": "The Mist - 1080p - x264 - LotusFlower - H264 - SDR",
+          "NalLengthSize": "4",
+          "IsInterlaced": false,
+          "IsAVC": true,
+          "BitRate": 3681689,
+          "BitDepth": 8,
+          "RefFrames": 1,
+          "IsDefault": true,
+          "IsForced": false,
+          "Height": 1036,
+          "Width": 1920,
+          "AverageFrameRate": 23.976025,
+          "RealFrameRate": 23.976025,
+          "Profile": "High",
+          "Type": "Video",
+          "AspectRatio": "1.85:1",
+          "Index": 0,
+          "IsExternal": false,
+          "IsTextSubtitleStream": false,
+          "SupportsExternalStream": false,
+          "PixelFormat": "yuv420p",
+          "Level": 40
+        },
+        {
+          "Codec": "ac3",
+          "Language": "fre",
+          "TimeBase": "1/1000",
+          "Title": "VFF AC3 5.1",
+          "DisplayTitle": "VFF AC3 5.1 - Fre - Dolby Digital",
+          "IsInterlaced": false,
+          "ChannelLayout": "5.1",
+          "BitRate": 384000,
+          "Channels": 6,
+          "SampleRate": 48000,
+          "IsDefault": false,
+          "IsForced": false,
+          "Type": "Audio",
+          "Index": 1,
+          "IsExternal": false,
+          "IsTextSubtitleStream": false,
+          "SupportsExternalStream": false,
+          "Level": 0
+        },
+        {
+          "Codec": "ac3",
+          "Language": "eng",
+          "TimeBase": "1/1000",
+          "Title": "Anglais AC3 5.1",
+          "DisplayTitle": "Anglais AC3 5.1 - Eng - Dolby Digital",
+          "IsInterlaced": false,
+          "ChannelLayout": "5.1",
+          "BitRate": 448000,
+          "Channels": 6,
+          "SampleRate": 48000,
+          "IsDefault": false,
+          "IsForced": false,
+          "Type": "Audio",
+          "Index": 2,
+          "IsExternal": false,
+          "IsTextSubtitleStream": false,
+          "SupportsExternalStream": false,
+          "Level": 0
+        },
+        {
+          "Codec": "ac3",
+          "Language": "fre",
+          "TimeBase": "1/1000",
+          "Title": "VFQ AC3 5.1",
+          "DisplayTitle": "VFQ AC3 5.1 - Fre - Dolby Digital",
+          "IsInterlaced": false,
+          "ChannelLayout": "5.1",
+          "BitRate": 448000,
+          "Channels": 6,
+          "SampleRate": 48000,
+          "IsDefault": false,
+          "IsForced": false,
+          "Type": "Audio",
+          "Index": 3,
+          "IsExternal": false,
+          "IsTextSubtitleStream": false,
+          "SupportsExternalStream": false,
+          "Level": 0
+        },
+        {
+          "Codec": "subrip",
+          "Language": "fre",
+          "TimeBase": "1/1000",
+          "Title": "Français Complets",
+          "LocalizedUndefined": "Non défini",
+          "LocalizedDefault": "Par défaut",
+          "LocalizedForced": "Forcé",
+          "LocalizedExternal": "External",
+          "DisplayTitle": "Français Complets - Fre - SUBRIP",
+          "IsInterlaced": false,
+          "IsDefault": false,
+          "IsForced": false,
+          "Type": "Subtitle",
+          "Index": 4,
+          "IsExternal": false,
+          "IsTextSubtitleStream": true,
+          "SupportsExternalStream": true,
+          "Level": 0
+        },
+        {
+          "Codec": "subrip",
+          "Language": "eng",
+          "TimeBase": "1/1000",
+          "Title": "Anglais Complets",
+          "LocalizedUndefined": "Non défini",
+          "LocalizedDefault": "Par défaut",
+          "LocalizedForced": "Forcé",
+          "LocalizedExternal": "External",
+          "DisplayTitle": "Anglais Complets - Eng - SUBRIP",
+          "IsInterlaced": false,
+          "IsDefault": false,
+          "IsForced": false,
+          "Type": "Subtitle",
+          "Index": 5,
+          "IsExternal": false,
+          "IsTextSubtitleStream": true,
+          "SupportsExternalStream": true,
+          "Level": 0
+        }
+      ],
+      "MediaAttachments": [],
+      "Formats": [],
+      "Bitrate": 4961689,
+      "RequiredHttpHeaders": {},
+      "DefaultAudioStreamIndex": 1
+    }
+  ],
+  "CriticRating": 72,
+  "ProductionLocations": ["United States of America"],
+  "Path": "/data/movies/The Mist (2007)/The Mist (2007).mkv",
+  "EnableMediaSourceDisplay": true,
+  "OfficialRating": "FR-12",
+  "ChannelId": null,
+  "Overview": "Tandis qu'une brume étrange semble envelopper une petite ville du Maine, David Drayton et son jeune fils Billy se retrouvent pris au piège dans un supermarché, en compagnie d'autres habitants terrorisés. David ne tarde pas à s'apercevoir que le brouillard est peuplé d'inquiétantes créatures... Leur seule chance à tous de s'en sortir consiste à s'unir. Mais est-ce possible quand on connaît la nature humaine ? Alors que certains cèdent à la panique, David se demande ce qui est le plus effrayant : les monstres qui rôdent dans la brume ou ses semblables réfugiés dans le supermarché ?",
+  "Taglines": ["La peur change tout"],
+  "Genres": ["Horreur", "Science-Fiction", "Thriller"],
+  "CommunityRating": 6.89,
+  "RunTimeTicks": 75597561856,
+  "PlayAccess": "Full",
+  "ProductionYear": 2007,
+  "RemoteTrailers": [
+    {
+      "Url": "https://www.youtube.com/watch?v=WO-pSTKPfFk",
+      "Name": "🎇 THE MIST Bande Annonce VF / 2007"
+    }
+  ],
+  "ProviderIds": { "Tmdb": "5876", "Imdb": "tt0884328" },
+  "IsHD": true,
+  "IsFolder": false,
+  "ParentId": "429cfa5c1648e89c5f696f08e19b138f",
+  "Type": "Movie",
+  "People": [
+    {
+      "Name": "Thomas Jane",
+      "Id": "fc1b2081c7bedd6af472489129f6a97a",
+      "Role": "David Drayton",
+      "Type": "Actor",
+      "PrimaryImageTag": "ff3427e290fe4ae9be1025ae4325e942",
+      "ImageBlurHashes": {
+        "Primary": {
+          "ff3427e290fe4ae9be1025ae4325e942": "daFzsU-B0zNGwcn%jZjZ9]Na$%xZNaofxZR*NGWBxZs:"
+        }
+      }
+    },
+    {
+      "Name": "Laurie Holden",
+      "Id": "bebb648ea2d092f0fc5174042f1700b0",
+      "Role": "Amanda",
+      "Type": "Actor",
+      "PrimaryImageTag": "5bfcf19eb574d9943991c94678a21ef3",
+      "ImageBlurHashes": {
+        "Primary": {
+          "5bfcf19eb574d9943991c94678a21ef3": "d79QdDIC0LIpDixZx]NG9v-.i_RQ%LIVRj%f9GWX%MsS"
+        }
+      }
+    },
+    {
+      "Name": "Toby Jones",
+      "Id": "6b016519b4daf8fc01fd67e273420822",
+      "Role": "Ollie",
+      "Type": "Actor",
+      "PrimaryImageTag": "704bafba088432ccb87dfd068d150b6a",
+      "ImageBlurHashes": {
+        "Primary": {
+          "704bafba088432ccb87dfd068d150b6a": "dF9ZWP={0f57={xZIpNG57I:-o-V9aNG%1%1NGWBs:t6"
+        }
+      }
+    },
+    {
+      "Name": "Marcia Gay Harden",
+      "Id": "c23c6c5186e97338660ac1fa75d7c323",
+      "Role": "Mrs. Carmody",
+      "Type": "Actor",
+      "PrimaryImageTag": "01882d03e95d24cd4450ea97583b9ced",
+      "ImageBlurHashes": {
+        "Primary": {
+          "01882d03e95d24cd4450ea97583b9ced": "dcHT?a-;0}o#b{%M%MW=Os%M-pX8tSXSt7%2S$xuxaWV"
+        }
+      }
+    },
+    {
+      "Name": "Andre Braugher",
+      "Id": "62fb6005106c849c3f280216c46eac27",
+      "Role": "Norton",
+      "Type": "Actor",
+      "PrimaryImageTag": "0e4935cf60cdf913543930a30d45e17c",
+      "ImageBlurHashes": {
+        "Primary": {
+          "0e4935cf60cdf913543930a30d45e17c": "dMC?Q4?G4.9a4mRP%gkWx^ozRiWAo}R*RPs:9FRj-pxa"
+        }
+      }
+    },
+    {
+      "Name": "William Sadler",
+      "Id": "9ae850bb84e79665e457f08ff04a142e",
+      "Role": "Jim",
+      "Type": "Actor",
+      "PrimaryImageTag": "4e1d13df81880221c0826715b5fa7e08",
+      "ImageBlurHashes": {
+        "Primary": {
+          "4e1d13df81880221c0826715b5fa7e08": "dUGbI~sp0fxurpRkWBt657S4nhRjX8o0tRkDIUs:xajs"
+        }
+      }
+    },
+    {
+      "Name": "Jeffrey DeMunn",
+      "Id": "7c6c72bd2e14a8d0c66c27c7c713d5f6",
+      "Role": "Dan Miller",
+      "Type": "Actor",
+      "PrimaryImageTag": "e20b9613a0244c8e4ea7203d8781e499",
+      "ImageBlurHashes": {
+        "Primary": {
+          "e20b9613a0244c8e4ea7203d8781e499": "dNCiR9t70zW=%0oJR*R*EMjs$%R*a}WCR+oLM{a|xZj["
+        }
+      }
+    },
+    {
+      "Name": "Samuel Witwer",
+      "Id": "9249abe71e1cf3bd88a76609d14d58a4",
+      "Role": "Jessup",
+      "Type": "Actor",
+      "PrimaryImageTag": "960582acb5ee7f1a1ad79d588c146d97",
+      "ImageBlurHashes": {
+        "Primary": {
+          "960582acb5ee7f1a1ad79d588c146d97": "dsFjBBx]T#pJ%$kYT0kDIpWDr=jEO[aJofbIkskDofkC"
+        }
+      }
+    },
+    {
+      "Name": "Chris Owen",
+      "Id": "48812ea44dc6001b69bd627623547bb2",
+      "Role": "Norm",
+      "Type": "Actor",
+      "PrimaryImageTag": "3de0ea542e89a8745b417e2f54610099",
+      "ImageBlurHashes": {
+        "Primary": {
+          "3de0ea542e89a8745b417e2f54610099": "dtINXJof0eoeNGofs:WB9aWBxtWVM{f6t7j]WVWVt7of"
+        }
+      }
+    },
+    {
+      "Name": "Alexa Davalos",
+      "Id": "bd45afed0cd081dff92827689f29cac3",
+      "Role": "Sally",
+      "Type": "Actor",
+      "PrimaryImageTag": "092e2cec1c6c44212f8d2dfb311e3ee0",
+      "ImageBlurHashes": {
+        "Primary": {
+          "092e2cec1c6c44212f8d2dfb311e3ee0": "dPD8qCt60gNG?FS2IpNG9uWC-nxZ9uRk%1s:WBR*xakB"
+        }
+      }
+    },
+    {
+      "Name": "David Jensen",
+      "Id": "8c9dc3bb8c5b387cb9b24ead9992b3b9",
+      "Role": "Myron",
+      "Type": "Actor",
+      "PrimaryImageTag": "6b4504eeadcaffd85b26bd749b65a6fc",
+      "ImageBlurHashes": {
+        "Primary": {
+          "6b4504eeadcaffd85b26bd749b65a6fc": "dSCY,gM{0fxuV?t7IojYX9aexaR+NGj[s:oKM|j[s:j["
+        }
+      }
+    },
+    {
+      "Name": "Frances Sternhagen",
+      "Id": "912ffda0c310dd77c84a93fca6be9334",
+      "Role": "Irene",
+      "Type": "Actor",
+      "PrimaryImageTag": "354a2b59cbfa039304dd9eb22650a30e",
+      "ImageBlurHashes": {
+        "Primary": {
+          "354a2b59cbfa039304dd9eb22650a30e": "dhFi11WE0KMx-OIUS%xvX9WCs:V@S%j[s8WBRjWBs:oz"
+        }
+      }
+    },
+    {
+      "Name": "Nathan Gamble",
+      "Id": "fce9e7adc447b689a6816fbf9840b36f",
+      "Role": "Billy Drayton",
+      "Type": "Actor",
+      "PrimaryImageTag": "edcbbaa3fc7baacc2f95f67e5328d92a",
+      "ImageBlurHashes": {
+        "Primary": {
+          "edcbbaa3fc7baacc2f95f67e5328d92a": "dpIhBRaJtmR*~qaxxuaxo}ozs:s;x]t7oLog%goft6of"
+        }
+      }
+    },
+    {
+      "Name": "Robert C. Treveiler",
+      "Id": "6541ac926189f5d8d3a19292f89291a0",
+      "Role": "Bud Brown",
+      "Type": "Actor",
+      "PrimaryImageTag": "98812151c42f5baa229999ff45f514c1",
+      "ImageBlurHashes": {
+        "Primary": {
+          "98812151c42f5baa229999ff45f514c1": "dICFV3-U0}9]rrxGE2EME#WV=xxaI;R*s.oLIWR*oJs:"
+        }
+      }
+    },
+    {
+      "Name": "Melissa McBride",
+      "Id": "bb956412ecafde1862531243d73c667c",
+      "Role": "Woman with Kids at Home",
+      "Type": "Actor",
+      "PrimaryImageTag": "510c48111ed7670f7b046a23c736e58b",
+      "ImageBlurHashes": {
+        "Primary": {
+          "510c48111ed7670f7b046a23c736e58b": "dI9sn|R*0f%1t7f6WBWV9us:-VNGM|j]s:axNGaysnoK"
+        }
+      }
+    },
+    {
+      "Name": "Frank Darabont",
+      "Id": "f81428f27a40c1245050479f5b3b030a",
+      "Role": "Director",
+      "Type": "Director",
+      "PrimaryImageTag": "128bee981121b096363e4ea910ac4a57",
+      "ImageBlurHashes": {
+        "Primary": {
+          "128bee981121b096363e4ea910ac4a57": "dD8NtjxuD%9E~qt7IUD%xuofRjRjRjofazt7M{ayj[t7"
+        }
+      }
+    },
+    {
+      "Name": "Stephen King",
+      "Id": "0f81f80d5b74f65e6a495842ed323a18",
+      "Role": "Novel",
+      "Type": "Writer",
+      "PrimaryImageTag": "9b8ce066e58767b3b5ef645381a286b6",
+      "ImageBlurHashes": {
+        "Primary": {
+          "9b8ce066e58767b3b5ef645381a286b6": "d~LqIZs:x^xu~qt7t7t7SNofV@jZxuayjZWV%Mofayof"
+        }
+      }
+    },
+    {
+      "Name": "Frank Darabont",
+      "Id": "f81428f27a40c1245050479f5b3b030a",
+      "Role": "Screenplay",
+      "Type": "Writer",
+      "PrimaryImageTag": "128bee981121b096363e4ea910ac4a57",
+      "ImageBlurHashes": {
+        "Primary": {
+          "128bee981121b096363e4ea910ac4a57": "dD8NtjxuD%9E~qt7IUD%xuofRjRjRjofazt7M{ayj[t7"
+        }
+      }
+    },
+    {
+      "Name": "Bob Weinstein",
+      "Id": "09ca0ba104db28e41c91127a1183cb9b",
+      "Role": "Executive Producer",
+      "Type": "Producer",
+      "PrimaryImageTag": "37bb697a6c2403302e5ff8a9babadea4",
+      "ImageBlurHashes": {
+        "Primary": {
+          "37bb697a6c2403302e5ff8a9babadea4": "dSD+e?-o0KM|rps.o#NHS4xuxFM{NbWBs-t7E1NGt7of"
+        }
+      }
+    },
+    {
+      "Name": "Harvey Weinstein",
+      "Id": "0a3b39eae8ae59d1f6452ded28e98a22",
+      "Role": "Executive Producer",
+      "Type": "Producer",
+      "PrimaryImageTag": "51da309b002b0365aea7fcb76d74cdd9",
+      "ImageBlurHashes": {
+        "Primary": {
+          "51da309b002b0365aea7fcb76d74cdd9": "dVGRbk^+0z9tR4jEtRWX%MbIE1ayWXtRkDR*I;R+s.of"
+        }
+      }
+    },
+    {
+      "Name": "Frank Darabont",
+      "Id": "f81428f27a40c1245050479f5b3b030a",
+      "Role": "Producer",
+      "Type": "Producer",
+      "PrimaryImageTag": "128bee981121b096363e4ea910ac4a57",
+      "ImageBlurHashes": {
+        "Primary": {
+          "128bee981121b096363e4ea910ac4a57": "dD8NtjxuD%9E~qt7IUD%xuofRjRjRjofazt7M{ayj[t7"
+        }
+      }
+    },
+    {
+      "Name": "Liz Glotzer",
+      "Id": "a57939907ebe16f4732029d826d7aa72",
+      "Role": "Producer",
+      "Type": "Producer",
+      "ImageBlurHashes": { "Primary": {} }
+    },
+    {
+      "Name": "Denise M. Huth",
+      "Id": "4e792158c0da80758c398de799ab320b",
+      "Role": "Executive Producer",
+      "Type": "Producer",
+      "PrimaryImageTag": "1bd23fe1a31cd1d9895a5bd5aff16f41",
+      "ImageBlurHashes": {
+        "Primary": {
+          "1bd23fe1a31cd1d9895a5bd5aff16f41": "dKHd]CxYGW%e~ioyNW%0Y2X5jFtQy9NGxbslo]t7RjWY"
+        }
+      }
+    },
+    {
+      "Name": "Randi Richmond",
+      "Id": "fc5544fc9bd2aa17cf831a895924a368",
+      "Role": "Executive Producer",
+      "Type": "Producer",
+      "ImageBlurHashes": { "Primary": {} }
+    },
+    {
+      "Name": "Anna Garduno",
+      "Id": "08e0595d710d463e49c1af1bee98fb7b",
+      "Role": "Executive Producer",
+      "Type": "Producer",
+      "ImageBlurHashes": { "Primary": {} }
+    },
+    {
+      "Name": "Richard Saperstein",
+      "Id": "b5b3782d03ccce1aee5c39de90042ab0",
+      "Role": "Executive Producer",
+      "Type": "Producer",
+      "ImageBlurHashes": { "Primary": {} }
+    }
+  ],
+  "Studios": [
+    {
+      "Name": "Darkwoods Productions",
+      "Id": "d9dde052da5ebdd5fc3a555813317001"
+    },
+    { "Name": "Dimension Films", "Id": "33048a4bc039c5bf6fb67c9ac9f02756" },
+    {
+      "Name": "The Weinstein Company",
+      "Id": "f57e73b8c2c5e9c106585aa0c3892b58"
+    },
+    { "Name": "Metro-Goldwyn-Mayer", "Id": "f215ff226e8168c664177fa955593aac" }
+  ],
+  "GenreItems": [
+    { "Name": "Horreur", "Id": "5b702081ad84381b775fe0350ff289cc" },
+    { "Name": "Science-Fiction", "Id": "44a6a873a8ec54283c407e7193e7dd69" },
+    { "Name": "Thriller", "Id": "4936f5b1a6f84f0b0aa2657368a5b364" }
+  ],
+  "LocalTrailerCount": 0,
+  "UserData": {
+    "PlaybackPositionTicks": 0,
+    "PlayCount": 0,
+    "IsFavorite": false,
+    "Played": false,
+    "Key": "5876"
+  },
+  "SpecialFeatureCount": 0,
+  "DisplayPreferencesId": "dbf7709c41faaa746463d67978eb863d",
+  "Tags": [
+    "monster",
+    "supermarket",
+    "fight",
+    "artist",
+    "fog",
+    "bible",
+    "spider",
+    "faith",
+    "prayer",
+    "survival",
+    "giant monster",
+    "anger",
+    "thunderstorm",
+    "father son relationship"
+  ],
+  "PrimaryImageAspectRatio": 0.6666666666666666,
+  "MediaStreams": [
+    {
+      "Codec": "h264",
+      "Language": "eng",
+      "ColorSpace": "bt709",
+      "ColorTransfer": "bt709",
+      "ColorPrimaries": "bt709",
+      "TimeBase": "1/1000",
+      "Title": "The Mist - 1080p - x264 - LotusFlower",
+      "VideoRange": "SDR",
+      "VideoRangeType": "SDR",
+      "DisplayTitle": "The Mist - 1080p - x264 - LotusFlower - H264 - SDR",
+      "NalLengthSize": "4",
+      "IsInterlaced": false,
+      "IsAVC": true,
+      "BitRate": 3681689,
+      "BitDepth": 8,
+      "RefFrames": 1,
+      "IsDefault": true,
+      "IsForced": false,
+      "Height": 1036,
+      "Width": 1920,
+      "AverageFrameRate": 23.976025,
+      "RealFrameRate": 23.976025,
+      "Profile": "High",
+      "Type": "Video",
+      "AspectRatio": "1.85:1",
+      "Index": 0,
+      "IsExternal": false,
+      "IsTextSubtitleStream": false,
+      "SupportsExternalStream": false,
+      "PixelFormat": "yuv420p",
+      "Level": 40
+    },
+    {
+      "Codec": "ac3",
+      "Language": "fre",
+      "TimeBase": "1/1000",
+      "Title": "VFF AC3 5.1",
+      "DisplayTitle": "VFF AC3 5.1 - Fre - Dolby Digital",
+      "IsInterlaced": false,
+      "ChannelLayout": "5.1",
+      "BitRate": 384000,
+      "Channels": 6,
+      "SampleRate": 48000,
+      "IsDefault": false,
+      "IsForced": false,
+      "Type": "Audio",
+      "Index": 1,
+      "IsExternal": false,
+      "IsTextSubtitleStream": false,
+      "SupportsExternalStream": false,
+      "Level": 0
+    },
+    {
+      "Codec": "ac3",
+      "Language": "eng",
+      "TimeBase": "1/1000",
+      "Title": "Anglais AC3 5.1",
+      "DisplayTitle": "Anglais AC3 5.1 - Eng - Dolby Digital",
+      "IsInterlaced": false,
+      "ChannelLayout": "5.1",
+      "BitRate": 448000,
+      "Channels": 6,
+      "SampleRate": 48000,
+      "IsDefault": false,
+      "IsForced": false,
+      "Type": "Audio",
+      "Index": 2,
+      "IsExternal": false,
+      "IsTextSubtitleStream": false,
+      "SupportsExternalStream": false,
+      "Level": 0
+    },
+    {
+      "Codec": "ac3",
+      "Language": "fre",
+      "TimeBase": "1/1000",
+      "Title": "VFQ AC3 5.1",
+      "DisplayTitle": "VFQ AC3 5.1 - Fre - Dolby Digital",
+      "IsInterlaced": false,
+      "ChannelLayout": "5.1",
+      "BitRate": 448000,
+      "Channels": 6,
+      "SampleRate": 48000,
+      "IsDefault": false,
+      "IsForced": false,
+      "Type": "Audio",
+      "Index": 3,
+      "IsExternal": false,
+      "IsTextSubtitleStream": false,
+      "SupportsExternalStream": false,
+      "Level": 0
+    },
+    {
+      "Codec": "subrip",
+      "Language": "fre",
+      "TimeBase": "1/1000",
+      "Title": "Français Complets",
+      "LocalizedUndefined": "Non défini",
+      "LocalizedDefault": "Par défaut",
+      "LocalizedForced": "Forcé",
+      "LocalizedExternal": "External",
+      "DisplayTitle": "Français Complets - Fre - SUBRIP",
+      "IsInterlaced": false,
+      "IsDefault": false,
+      "IsForced": false,
+      "Type": "Subtitle",
+      "Index": 4,
+      "IsExternal": false,
+      "IsTextSubtitleStream": true,
+      "SupportsExternalStream": true,
+      "Level": 0
+    },
+    {
+      "Codec": "subrip",
+      "Language": "eng",
+      "TimeBase": "1/1000",
+      "Title": "Anglais Complets",
+      "LocalizedUndefined": "Non défini",
+      "LocalizedDefault": "Par défaut",
+      "LocalizedForced": "Forcé",
+      "LocalizedExternal": "External",
+      "DisplayTitle": "Anglais Complets - Eng - SUBRIP",
+      "IsInterlaced": false,
+      "IsDefault": false,
+      "IsForced": false,
+      "Type": "Subtitle",
+      "Index": 5,
+      "IsExternal": false,
+      "IsTextSubtitleStream": true,
+      "SupportsExternalStream": true,
+      "Level": 0
+    }
+  ],
+  "VideoType": "VideoFile",
+  "ImageTags": {
+    "Primary": "ba03ad0243a8958d7c23688113d66608",
+    "Logo": "ba03ad0243a8958d7c23688113d66608"
+  },
+  "BackdropImageTags": ["ba03ad0243a8958d7c23688113d66608"],
+  "ImageBlurHashes": {
+    "Backdrop": {
+      "ba03ad0243a8958d7c23688113d66608": "WbH-*?%M4oi_D+E2~UxaoeWBIpR+%0o2t7WVR*ofs.V[RjWCtQoy"
+    },
+    "Primary": {
+      "ba03ad0243a8958d7c23688113d66608": "dcE2zlxt9ZV@s,aeofoL0LRj%MkCNHoeWBWVxtt7jZoL"
+    },
+    "Logo": {
+      "ba03ad0243a8958d7c23688113d66608": "HGTSUAxufQxufQxufQxufQ~qj[fQj[fQj[fQj[fQ"
+    }
+  },
+  "Chapters": [
+    {
+      "StartPositionTicks": 0,
+      "Name": "Chapter 1",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 3626540000,
+      "Name": "Chapter 2",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 10544700000,
+      "Name": "Chapter 3",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 13346670000,
+      "Name": "Chapter 4",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 17222200000,
+      "Name": "Chapter 5",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 19066550000,
+      "Name": "Chapter 6",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 23388780000,
+      "Name": "Chapter 7",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 25009570000,
+      "Name": "Chapter 8",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 28636110000,
+      "Name": "Chapter 9",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 32684320000,
+      "Name": "Chapter 10",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 39584960000,
+      "Name": "Chapter 11",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 46332120000,
+      "Name": "Chapter 12",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 51255790000,
+      "Name": "Chapter 13",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 53608140000,
+      "Name": "Chapter 14",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 57287230000,
+      "Name": "Chapter 15",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 60656850000,
+      "Name": "Chapter 16",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 62475750000,
+      "Name": "Chapter 17",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    },
+    {
+      "StartPositionTicks": 70437870000,
+      "Name": "Chapter 18",
+      "ImageDateModified": "0001-01-01T00:00:00.0000000Z"
+    }
+  ],
+  "LocationType": "FileSystem",
+  "MediaType": "Video",
+  "LockedFields": [],
+  "LockData": false,
+  "Width": 1920,
+  "Height": 1036
+}
