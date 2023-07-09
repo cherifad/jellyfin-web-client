@@ -1,11 +1,11 @@
 <template>
-    <div class="relative">
-        <TrashIcon class="absolute top-0 right-0 w-6 h-6 text-white cursor-pointer" @click="recentLoginStore.removeRecentLogin(props.accountId)" />
-        <EllipsisVerticalIcon class="absolute top-0 right-0 w-6 h-6 text-white cursor-pointer" />
+    <div class="relative bg-white rounded-lg text-black px-8 pt-5 pb-3 flex flex-col items-center justify-between">
+        <TrashIcon class="absolute top-1 left-1 text-red-500 w-6 h-6 cursor-pointer" @click="recentLoginStore.removeRecentLogin(props.accountId)" />
+        <EllipsisVerticalIcon class="absolute top-0 right-0 w-6 h-6 cursor-pointer" />
         <div>
-            <img :src="imgLink" :alt="username + ' profile image'" class="rounded-full w-24 h-24">
+            <img :src="imgLink" :alt="username + ' profile image'" class="rounded-full w-24 h-24 shadow-sm shadow-black">
         </div>
-        <span class="text-white text-2xl">{{ username }}</span>
+        <p class="text-lg font-bold mt-3 text-center">{{ username }}</p>
     </div>
 </template>
 
@@ -33,6 +33,6 @@ const props = defineProps({
 })
 
 const imgLink = computed(() => {
-    return `${configStore.serverUrl}/Users/${props.accountId}/Images/Primary?tag=${props.imageId}`
+    return `${configStore.selectedServerUrlValue}/Users/${props.accountId}/Images/Primary?tag=${props.imageId}`
 })
 </script>

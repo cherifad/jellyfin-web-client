@@ -2,6 +2,7 @@ import { login, logout } from "@/api/auth";
 import { defineStore } from "pinia";
 import { useLocalStorage } from "@vueuse/core";
 import { useConfigStore } from "@/stores/useConfig";
+import { useRecentLoginStore } from "@/stores/useRecentLogin";
 import JellyfinApi from "@/api";
 
 export const useAuthStore = defineStore("auth", () => {
@@ -24,6 +25,7 @@ export const useAuthStore = defineStore("auth", () => {
       accessToken.value = res.data.AccessToken;
       username.value = res.data.User.Name;
       accountID.value = res.data.User.Id;
+      useRecentLoginStore().addRecentLogin(pUsername, accountID.value, accessToken.value, avatarId.value, serverId.value);
       JellyfinApi.destroyInstance();
       JellyfinApi.getInstance(useConfigStore().selectedServerUrlValue, accessToken.value);
     }
@@ -36,6 +38,7 @@ export const useAuthStore = defineStore("auth", () => {
     serverId.value = "";
     accessToken.value = "";
     username.value = "";
+    accountID.value = "";
   };
 
   return {

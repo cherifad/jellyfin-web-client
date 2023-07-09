@@ -5,19 +5,37 @@
       <h1 class="text-7xl font-light mb-4">Welcome back!</h1>
     </div>
     <!-- Recent Logins -->
-    <div v-if="recentLoginStore.getRecentLogins.length > 0">
-      <div class="flex flex-col items-center mt-10">
-        <h1 class="text-3xl font-light mb-4">Recent Logins</h1>
-      </div>
-      <div class="flex flex-col items-center mt-10">
-        <div class="grid grid-cols-3 gap-4">
-          <AccountCard
-            v-for="recentLogin in recentLoginStore.getRecentLogins"
-            :key="recentLogin.accountId"
-            :username="recentLogin.username"
-            :imageId="recentLogin.imageId"
-            :accountId="recentLogin.accountId"
-          />
+    <div v-if="recentLoginStore.recentLoginsValue.length > 0" class="flex flex-col items-center">
+      <div class="w-3/5">
+        <div class="flex items-center gap-5 mt-10">
+          <h1 class="text-3xl font-bold mb-2">Recent Logins</h1>
+          <p
+              class="text-xl flex gap-2 items-center hover:text-[#ed5a45] font-bold cursor-pointer"
+              @click="recentLoginStore.removeAllRecentLogins"
+            >
+              <TrashIcon class="w-6 h-6" />
+              Remove all
+            </p>
+        </div>
+        <div class="flex flex-col mt-2">
+          <div class="flex flex-wrap gap-4">
+            <AccountCard
+              v-for="recentLogin in recentLoginStore.recentLoginsValue"
+              :key="recentLogin.accountId"
+              :username="recentLogin.username"
+              :imageId="recentLogin.avatarId"
+              :account-id="recentLogin.accountID"
+            />
+            <div class="relative bg-[#ed5a45] rounded-lg text-white px-8 pt-5 pb-3 flex flex-col items-center justify-between">
+              <div class="rounded-full w-20 h-20 bg-[#ff9384] shadow-sm shadow-black flex items-center justify-center">
+                <PlusIcon
+                  :alt="username + ' profile image'"
+                  class="w-8 h-8"
+                />
+              </div>
+              <p class="text-lg font-bold mt-3 text-center">{{ $t('add_account') }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -137,6 +155,8 @@ import {
   CheckIcon,
   ArrowRightOnRectangleIcon,
   ArrowsRightLeftIcon,
+  PlusIcon,
+  TrashIcon,
 } from "@heroicons/vue/24/solid";
 import JellyfinApi from "@/api";
 
@@ -154,7 +174,10 @@ const showLostPasswordModal = ref(false);
 
 onMounted(async () => {
   JellyfinApi.destroyInstance();
-  JellyfinApi.getInstance(configStore.selectedServerUrlValue, authStore.accessToken);
+  JellyfinApi.getInstance(
+    configStore.selectedServerUrlValue,
+    authStore.accessToken
+  );
 });
 
 const canLogin = computed(() => {
@@ -174,7 +197,6 @@ async function login() {
   if (canLogin.value) {
     await authStore.storeLogin(form.value.username, form.value.password);
     if (authStore.authenticated) {
-      recentLoginStore.addRecentLogin(form.value.username, authStore.accountID, authStore.accessToken);
       navigateTo("/");
     }
   }
