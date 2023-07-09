@@ -3,5 +3,8 @@
     "logout": "Logout",
     "welcome": "Welcome",
     "add_to_favorites": "Add to favorites",
-    "add_account": "Add account"
+    "add_account": "Add account",
+    "server_list_title": "Server list",
+    "server_register_title": "Add server",
+    "server_URL": "Server URL"
 }

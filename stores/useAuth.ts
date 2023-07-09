@@ -3,42 +3,31 @@ import { defineStore } from "pinia";
 import { useLocalStorage } from "@vueuse/core";
 import { useConfigStore } from "@/stores/useConfig";
 import { useRecentLoginStore } from "@/stores/useRecentLogin";
+import User from "@/models/user";
 import JellyfinApi from "@/api";
 
 export const useAuthStore = defineStore("auth", () => {
-  const avatarId = useLocalStorage("avatarId", "");
-  const serverId = useLocalStorage("serverId", "");
-  const accessToken = useLocalStorage("accessToken", "");
-  const username = useLocalStorage("username", "");
-  const accountID = useLocalStorage("accountID", "");
+  const user = useLocalStorage<User>("user", new User("", "", "", "", ""));
   
-  const authenticated = computed(() => { return accessToken.value !== ""; });
-  const accessTokenValue = computed(() => accessToken.value);
-  const userIdValue = computed(() => accountID.value);
+  const authenticated = computed(() => { return user.value.accessToken !== ""; });
+  const accessTokenValue = computed(() => user.value.accessToken);
+  const userIdValue = computed(() => user.value.accountID);
 
   const storeLogin = async (pUsername: string, pPassword: string) => {
     console.log("storeLogin");
     const res: any = await login(pUsername, pPassword);
     if (res.data.AccessToken) {
-      avatarId.value = res.data.User.PrimaryImageTag;
-      serverId.value = res.data.ServerId;
-      accessToken.value = res.data.AccessToken;
-      username.value = res.data.User.Name;
-      accountID.value = res.data.User.Id;
-      useRecentLoginStore().addRecentLogin(pUsername, accountID.value, accessToken.value, avatarId.value, serverId.value);
+      user.value = new User(pUsername, res.data.User.Id, res.data.AccessToken, res.data.User.PrimaryImageTag, res.data.ServerId);
+      useRecentLoginStore().addRecentLogin(pUsername, res.data.User.Id, res.data.AccessToken, res.data.User.PrimaryImageTag, res.data.ServerId);
       JellyfinApi.destroyInstance();
-      JellyfinApi.getInstance(useConfigStore().selectedServerUrlValue, accessToken.value);
+      JellyfinApi.getInstance(useConfigStore().selectedServerValue.url, user.value.accessToken);
     }
   };
 
   const storeLogout = async () => {
     console.log("storeLogout");
     await logout();
-    avatarId.value = "";
-    serverId.value = "";
-    accessToken.value = "";
-    username.value = "";
-    accountID.value = "";
+    user.value = new User("", "", "", "", "");
   };
 
   return {

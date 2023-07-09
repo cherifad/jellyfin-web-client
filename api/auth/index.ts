@@ -67,12 +67,12 @@ async function checkServerUrl(url: string) {
   try {
     const res = await axios.get(url + query);
     if (res.data.StartupWizardCompleted) {
-      return true;
+      return res;
     } else {
-      return false;
+      return null;
     }
   } catch (error) {
-    return false;
+    return null;
   }
 }
 

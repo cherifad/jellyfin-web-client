@@ -89,8 +89,9 @@ export default class JellyfinApi {
       if (authStore.authenticated && this.instance.api.defaults.headers.common['X-Emby-Token'] !== authStore.accessTokenValue) {
         this.instance.api.defaults.headers.common['X-Emby-Token'] = authStore.accessTokenValue;
       }
-      if (configStore.selectedServerUrlValue && this.instance.api.defaults.baseURL !== configStore.selectedServerUrlValue) {
-        this.instance.api.defaults.baseURL = configStore.selectedServerUrlValue;
+      if (configStore.selectedServerValue.id !== "" && this.instance.api.defaults.baseURL !== configStore.selectedServerValue.url) {
+        console.log("JellyfinApi.initialize", configStore.selectedServerValue.url);
+        this.instance.api.defaults.baseURL = configStore.selectedServerValue.url;
       }
       this.instance._initialized = true;
     }

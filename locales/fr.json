@@ -3,5 +3,8 @@
     "logout": "Se déconnecter",
     "welcome": "Bienvenue",
     "add_to_favorite": "Ajouter aux favoris",
-    "add_account": "Ajouter un compte"
+    "add_account": "Ajouter un compte",
+    "server_list_title": "Liste des serveurs",
+    "server_register_title": "Ajouter un serveur",
+    "server_URL": "URL du serveur"
 }

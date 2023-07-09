@@ -65,6 +65,6 @@ const props = defineProps({
 const config = useConfigStore();
 
 const imageURL = computed(() => {
-  return `${config.selectedServerUrlValue}/Items/${props.itemId}/Images/Backdrop?tag=${props.backImage}`;
+  return `${config.selectedServerValue.url}/Items/${props.itemId}/Images/Backdrop?tag=${props.backImage}`;
 });
 </script>

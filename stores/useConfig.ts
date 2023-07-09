@@ -1,50 +1,63 @@
 import { ref, computed } from "vue";
 import { useLocalStorage } from "@vueuse/core";
 import JellyfinApi from "@/api";
+import Server from "@/models/server";
 
 export const useConfigStore = defineStore("config", () => {
-  const serversUrl = useLocalStorage<string[]>("serversUrl", []);
-  const selectedServerUrl = useLocalStorage<string>("selectedServerUrl", "");
+  const servers = useLocalStorage<Server[]>("servers", []);
+  const selectedServer = useLocalStorage<Server>("selectedServer", {
+    url: "",
+    id: "",
+  });
 
-  const serversCount = computed(() => serversUrl.value.length);
-  const serversUrlList = computed(() => serversUrl.value);
-  const selectedServerUrlValue = computed(() => selectedServerUrl.value);
+  watch(
+    () => selectedServer.value,
+    () => {
+      JellyfinApi.destroyInstance();
+    }
+  );
 
-  function addServerUrl(pServerUrl: string) {
-    const index = serversUrl.value.findIndex(
-      (serverUrl) => serverUrl === pServerUrl
-    );
+  const serversCount = computed(() => servers.value.length);
+  const serversList = computed(() => servers.value);
+  const selectedServerValue = computed(() => selectedServer.value);
+
+  function addServer(pServer: string, pServerId: string) {
+    const index = servers.value.findIndex((server) => server.url === pServer);
+    // If server already exists, update the id
     if (index > -1) {
-      serversUrl.value[index] = pServerUrl;
+      servers.value[index].id = pServerId;
     } else {
-      serversUrl.value.push(pServerUrl);
+      // If server doesn't exist, add it
+      servers.value.push(new Server(pServer, pServerId));
+      // If no server is selected, select the one just added
+      if (selectedServer.value.id === "") {
+        setSelectedServer(pServerId);
+      }
     }
-    selectedServerUrl.value = pServerUrl;
-    JellyfinApi.destroyInstance();
   }
 
-  function removeServerUrl(pServerUrl: string) {
-    const index = serversUrl.value.findIndex(
-      (serverUrl) => serverUrl === pServerUrl
-    );
+  function removeServer(pServerId: string) {
+    const index = servers.value.findIndex((server) => server.id === pServerId);
     if (index > -1) {
-      serversUrl.value.splice(index, 1);
-    }
-    if (selectedServerUrl.value === pServerUrl) {
-      selectedServerUrl.value = "";
+      servers.value.splice(index, 1);
     }
   }
 
-  function getServersUrl(): string[] {
-    return serversUrl.value;
+  function setSelectedServer(pServerId: string) {
+    const index = servers.value.findIndex((server) => server.id === pServerId);
+    if (index > -1) {
+      selectedServer.value = servers.value[index];
+    } else {
+      selectedServer.value = { url: "", id: "" };
+    }
   }
 
   return {
-    addServerUrl,
-    removeServerUrl,
-    getServersUrl,
+    addServer,
+    removeServer,
+    setSelectedServer,
     serversCount,
-    serversUrlList,
-    selectedServerUrlValue,
+    serversList,
+    selectedServerValue,
   };
 });

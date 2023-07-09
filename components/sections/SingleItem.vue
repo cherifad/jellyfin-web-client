@@ -75,7 +75,7 @@ const props = defineProps({
 // });
 
 const imgLink = computed(() => {
-  return `${config.selectedServerUrlValue}/Items/${props.itemId}/Images/Backdrop?fillHeight=300&fillWidth=450&tag=${props.itemImg}`;
+  return `${config.selectedServerValue.url}/Items/${props.itemId}/Images/Backdrop?fillHeight=300&fillWidth=450&tag=${props.itemImg}`;
 });
 
 const link = computed(() => {

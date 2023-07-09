@@ -23,6 +23,6 @@ const props = defineProps({
 });
 
 const imgLink = computed(() => {
-  return `${config.selectedServerUrlValue}/Items/${props.studioId}/Images/Thumb?tag=${props.studioImgTag}`;
+  return `${config.selectedServerValue.url}/Items/${props.studioId}/Images/Thumb?tag=${props.studioImgTag}`;
 });
 </script>

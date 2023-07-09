@@ -32,7 +32,7 @@ const props = defineProps({
 
 const posterUrl = computed(() => {
     if (props.peopleImageTag) {
-        return `${config.selectedServerUrlValue}/Items/${props.peopleId}/Images/Primary?maxHeight=500&tag=${props.peopleImageTag}`;
+        return `${config.selectedServerValue.url}/Items/${props.peopleId}/Images/Primary?maxHeight=500&tag=${props.peopleImageTag}`;
     } else {
         return "https://via.placeholder.com/300x500";
     }
