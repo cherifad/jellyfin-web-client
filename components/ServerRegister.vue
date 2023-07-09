@@ -2,6 +2,7 @@
   <PopUp
     :showModal="showModal"
     :modal-title="$t('server_register_title')"
+    :user-can-close="configStore.serversCount > 0"
     @close="(e) => null"
   >
     <div class="h-full flex flex-col items-center">
@@ -40,7 +41,7 @@ const register = async () => {
   checkingServerUrl.value = true;
   const serverUrlIsValid = await checkServerUrl(serverUrl.value);
   if (serverUrlIsValid) {
-    configStore.addServer(serverUrl.value, serverUrlIsValid.data.Id);
+    configStore.addServer(serverUrl.value, serverUrlIsValid.data.Id, serverUrlIsValid.data.ServerName);
     emit("close", false);
   } else {
     error.value = true;

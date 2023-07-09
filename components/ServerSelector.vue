@@ -7,7 +7,7 @@
                     :class="{'bg-red-300 p-3': server.id === config.selectedServerValue.id}"
                     class="flex gap-2 items-center w-full text-left justify-between"
                 >
-                    <span class="flex-1">{{ server.url }}</span>
+                    <a :href="server.url" target="_blank" class="flex-1 underline" alt="Go to site">{{ server.name }}</a>
                     <TrashIcon class="h-5 w-5 hover:text-[#ed5a45]" @click="config.removeServer(server.id)" />
                 </button>
             </li>

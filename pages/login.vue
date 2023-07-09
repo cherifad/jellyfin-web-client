@@ -2,14 +2,14 @@
   <!-- Login Page -->
   <div class="py-7 px-20 flex flex-col h-screen">
     <div class="flex flex-col items-center mt-10">
-      <h1 class="text-7xl font-light mb-4">Welcome back!</h1>
+      <h1 class="text-7xl font-light mb-4">Welcome back{{ configStore.serversCount > 0 ? ` to ${configStore.selectedServerValue.name}` : ''}}!</h1>
     </div>
     <!-- Recent Logins -->
-    <div v-if="recentLoginStore.recentLoginsValue.length > 0" class="flex flex-col items-center">
+    <div class="flex flex-col items-center">
       <div class="w-3/5">
         <div class="flex items-center gap-5 mt-10">
           <h1 class="text-3xl font-bold mb-2">Recent Logins</h1>
-          <p class="text-xl flex gap-2 items-center hover:text-[#ed5a45] font-bold cursor-pointer"
+          <p v-if="recentLoginStore.getUsersForServer(configStore.selectedServerValue.id).length > 0" class="text-xl flex gap-2 items-center hover:text-[#ed5a45] font-bold cursor-pointer"
             @click="recentLoginStore.removeAllRecentLogins">
             <TrashIcon class="w-6 h-6" />
             Remove all
@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-col mt-2">
           <div class="flex flex-wrap gap-4">
-            <AccountCard v-for="recentLogin in recentLoginStore.recentLoginsValue" :key="recentLogin.accountId"
+            <AccountCard v-if="recentLoginStore.getUsersForServer(configStore.selectedServerValue.id).length > 0" v-for="recentLogin in recentLoginStore.getUsersForServer(configStore.selectedServerValue.id)" :key="recentLogin.accountId"
               :username="recentLogin.username" :imageId="recentLogin.avatarId" :account-id="recentLogin.accountID" />
             <div
               class="relative bg-[#ed5a45] rounded-lg text-white px-8 pt-5 pb-3 flex flex-col items-center justify-between">
@@ -73,7 +73,6 @@
         </button>
       </div>
     </div>
-    {{ showNewServerModal }}
     <!-- Lost Password Modal -->
     <PopUp modalTitle="Test" :showModal="showLostPasswordModal" :key="showLostPasswordModal"
       @close="(e) => (showLostPasswordModal = e)">

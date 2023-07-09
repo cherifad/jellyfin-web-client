@@ -84,7 +84,6 @@ const result = ref(false);
 
 function logout() {
     if(confirm("Are you sure you want to logout?")) {
-        console.log("logout");
         authStore.storeLogout();
     }
 }

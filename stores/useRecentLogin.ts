@@ -25,6 +25,7 @@ export const useRecentLoginStore = defineStore("recentLogin", () => {
     const removeRecentLogin = (pAccountID: string, pServerId: string) => {
         const index = recentLogins.value.findIndex((recentLogin) => recentLogin.serverId === pServerId);
         if (index > -1) {
+            console.log(recentLogins.value[index])
             recentLogins.value[index].removeUser(pAccountID);
             // remove server if no users left
             if (recentLogins.value[index].users.length === 0) {
@@ -41,8 +42,17 @@ export const useRecentLoginStore = defineStore("recentLogin", () => {
         return recentLogins.value;
     };
 
+    const getUsersForServer = (pServerId: string) => {
+        const index = recentLogins.value.findIndex((recentLogin) => recentLogin.serverId === pServerId);
+        if (index > -1) {
+            return recentLogins.value[index].users;
+        }
+        return [];
+    };
+
     return {
         recentLoginsValue,
+        getUsersForServer,
         addRecentLogin,
         removeRecentLogin,
         getRecentLogins,

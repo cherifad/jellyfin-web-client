@@ -8,6 +8,7 @@ export const useConfigStore = defineStore("config", () => {
   const selectedServer = useLocalStorage<Server>("selectedServer", {
     url: "",
     id: "",
+    name: "",
   });
 
   watch(
@@ -21,14 +22,14 @@ export const useConfigStore = defineStore("config", () => {
   const serversList = computed(() => servers.value);
   const selectedServerValue = computed(() => selectedServer.value);
 
-  function addServer(pServer: string, pServerId: string) {
+  function addServer(pServer: string, pServerId: string, pName: string) {
     const index = servers.value.findIndex((server) => server.url === pServer);
     // If server already exists, update the id
     if (index > -1) {
       servers.value[index].id = pServerId;
     } else {
       // If server doesn't exist, add it
-      servers.value.push(new Server(pServer, pServerId));
+      servers.value.push(new Server(pServer, pServerId, pName));
       // If no server is selected, select the one just added
       if (selectedServer.value.id === "") {
         setSelectedServer(pServerId);
@@ -48,7 +49,7 @@ export const useConfigStore = defineStore("config", () => {
     if (index > -1) {
       selectedServer.value = servers.value[index];
     } else {
-      selectedServer.value = { url: "", id: "" };
+      selectedServer.value = { url: "", id: "", name: "" };
     }
   }
 

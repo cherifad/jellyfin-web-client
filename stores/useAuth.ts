@@ -14,7 +14,6 @@ export const useAuthStore = defineStore("auth", () => {
   const userIdValue = computed(() => user.value.accountID);
 
   const storeLogin = async (pUsername: string, pPassword: string) => {
-    console.log("storeLogin");
     const res: any = await login(pUsername, pPassword);
     if (res.data.AccessToken) {
       user.value = new User(pUsername, res.data.User.Id, res.data.AccessToken, res.data.User.PrimaryImageTag, res.data.ServerId);
@@ -25,7 +24,6 @@ export const useAuthStore = defineStore("auth", () => {
   };
 
   const storeLogout = async () => {
-    console.log("storeLogout");
     await logout();
     user.value = new User("", "", "", "", "");
   };

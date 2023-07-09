@@ -101,7 +101,6 @@ watch(
   () => props.showModal,
   (value) => {
     isOpen.value = value;
-    console.log(value);
   }
 );
 
