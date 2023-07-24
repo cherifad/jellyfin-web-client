@@ -1,10 +1,10 @@
 import JellyfinApi from "../";
+import { useAuthStore } from "@/stores/useAuth";
 
 const apiInstance = JellyfinApi.getInstance().api;
 
 function search(
     searchTerm: String, 
-    userId: String,
     limit?: Number, 
     includeItemTypes?: Array<String>, 
     excludeItemTypes?: Array<String>, 
@@ -16,7 +16,8 @@ function search(
     includeStudios?: Boolean,
     includeArtists?: Boolean) 
     {
-    var query = "/Users/" + userId + "/Items?SearchTerm=" + searchTerm + "&Recursive=true&IncludeItemTypes=Movie";
+        const authStore = useAuthStore();
+    var query = "/Users/" + authStore.userIdValue + "/Items?SearchTerm=" + searchTerm + "&Recursive=true&IncludeItemTypes=Movie";
 
     if (limit) {
         query += "&Limit=" + limit;

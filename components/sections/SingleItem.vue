@@ -1,6 +1,6 @@
 <template>
-  <div class="h-72 px-3">
-    <div class="relative rounded-xl h-4/5 bg-cover thumbnails" :style="{ backgroundImage: `url(${imgLink})` }">
+  <div class="h-fit px-3">
+    <div class="relative rounded-xl h-52 bg-cover thumbnails" :style="{ backgroundImage: `url(${imgLink})` }">
       <div v-if="itemFirstGenre !== ''"
         class="absolute target top-1 left-1 backdrop-blur-3xl font-semibold rounded-full px-3 py-1">
         {{ itemFirstGenre }}
@@ -10,7 +10,7 @@
       class="relative rounded-xl h-4/5 bg-cover "
       :style="{ backgroundImage: `url(${imgLink})` }"
     >
-    <img crossorigin="Anonymous" :src="imgLink" class="w-full h-full thumbnails rounded-xl" alt="yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy">
+    <ImageBlock crossorigin="Anonymous" :src="imgLink" class="w-full h-full thumbnails rounded-xl" alt="yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy">
       <div
         v-if="itemFirstGenre !== ''"
         class="absolute target top-1 left-1 backdrop-blur-3xl font-semibold rounded-full px-3 py-1"

@@ -147,15 +147,17 @@ watch(() => configStore.serversCount, (count) => {
 });
 
 definePageMeta({
-  layout: "unauthenticated",
-  middleware: ["not-auth"],
+  layout: "unauthenticated"
 });
 
 async function login() {
   if (canLogin.value) {
     await authStore.storeLogin(form.value.username, form.value.password);
+    console.log(authStore.authenticated);
     if (authStore.authenticated) {
       navigateTo("/");
+    } else {
+      alert("Wrong username or password");
     }
   }
 }

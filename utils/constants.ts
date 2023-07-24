@@ -9,4 +9,11 @@ const language: any = {
     "por": "Portugal"
 }
 
-export { language };
+const popUpSize: any = {
+    SMALL: "w-1/4",
+    MEDIUM: "w-1/2",
+    LARGE: "w-3/4",
+    FULL: "w-full"
+}
+
+export { language, popUpSize };

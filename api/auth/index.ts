@@ -1,10 +1,5 @@
-import { Body } from ".nuxt/components";
 import JellyfinApi from "@/api";
 import axios from "axios";
-import { AxiosResponse } from "axios";
-import crypto from "crypto";
-
-const api = JellyfinApi.getInstance().api;
 
 function login(username: string, password: string) {
     const query = "/Users/AuthenticateByName";

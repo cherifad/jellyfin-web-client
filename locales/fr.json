@@ -6,5 +6,6 @@
     "add_account": "Ajouter un compte",
     "server_list_title": "Liste des serveurs",
     "server_register_title": "Ajouter un serveur",
-    "server_URL": "URL du serveur"
+    "server_URL": "URL du serveur",
+    "fetching_data": "Récupération des données..."
 }

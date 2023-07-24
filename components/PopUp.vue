@@ -32,7 +32,7 @@
               leave-to="opacity-0 scale-95"
             >
               <DialogPanel
-                class="w-full relative max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
+                class="w-full relative max-w-[70vw] transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
                 :class="preventClose ? 'border-red-500 border-4 -translate-y-2' : ''"
               >
                 <XMarkIcon
@@ -65,6 +65,7 @@ import {
   DialogTitle,
 } from "@headlessui/vue";
 import { XMarkIcon } from "@heroicons/vue/24/solid";
+import { popUpSize } from "@/utils/constants";
 
 const props = defineProps({
   modalTitle: {
@@ -78,7 +79,7 @@ const props = defineProps({
   userCanClose: {
     type: Boolean,
     default: true,
-  },
+  }
 });
 
 const emits = defineEmits(["close"]);

@@ -10,29 +10,16 @@
     <SectionsLatestMoviesSlider />
   </SectionsSectionContainer>
   <p>hello</p>
-  <input
-    type="text"
-    v-model="searchTerms"
-    @input="executeSearch"
-    placeholder="search here..."
-    name=""
-    id=""
-    class="text-black"
-  />
+  <input type="text" v-model="searchTerms" @input="executeSearch" placeholder="search here..." name="" id=""
+    class="text-black" />
   <h1>Home page</h1>
-  <Swiper
-    :modules="[SwiperAutoplay]"
-    :slides-per-view="3"
-    :space-between="30"
-    :loop="true"
-    :autoplay="{
-      delay: 2000,
-      disableOnInteraction: true,
-    }"
-  >
+  <Swiper :modules="[SwiperAutoplay]" :slides-per-view="3" :space-between="30" :loop="true" :autoplay="{
+        delay: 2000,
+        disableOnInteraction: true,
+      }">
     <SwiperSlide v-for="result in test.Items" :key="result.Id">
       {{ result.Name }}
-      <!-- <img
+      <!-- <ImageBlock
         :src="`jellyfin/Items/${result.Id}/Images/Primary?fillHeight=300&fillWidth=450`"
         :alt="`testImg ${result.Id}`"
       /> -->
@@ -44,8 +31,7 @@
 import { search } from "@/api/search";
 
 definePageMeta({
-  layout: "home",
-  middleware: ["auth"],
+  layout: "home"
 });
 
 const test = ref("");
@@ -57,7 +43,6 @@ async function executeSearch() {
     console.log("searching for: " + searchTerms.value);
     const res = await search(
       searchTerms.value,
-      "55f617f0dde740d6a84ffb66b6859a5a",
       10
     );
     test.value = res.data;

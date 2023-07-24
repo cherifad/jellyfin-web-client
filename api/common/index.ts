@@ -1,4 +1,5 @@
-import JellyfinApi from "..";
+import People from "@/models/people";
+import JellyfinApi from "@/api";
 
 enum ItemType {
     Movie = "Movie",
@@ -81,4 +82,26 @@ function getRecommendations(itemId: String, limit?: Number) {
     return JellyfinApi.getInstance().api.get(query);
 }
 
-export { getLatest, getResume, getStudio, ItemType, getItemDetails, getRecommendations };
+function getPeopleMedia(personId: String) {
+    var userId = JellyfinApi.getInstance().userId;
+
+    var query = "/Users/" + userId + "/Items?SortOrder=Ascending&IncludeItemTypes=Movie&Recursive=true&Fields=Genres,AudioInfo,ParentId,PrimaryImageAspectRatio,BasicSyncInfo,AudioInfo,ParentId,PrimaryImageAspectRatio,BasicSyncInfo&Limit=10&StartIndex=0&CollapseBoxSetItems=false&SortBy=SortName&PersonIds=" + personId;
+
+    return JellyfinApi.getInstance().api.get(query);
+}
+
+async function getPeopleDetails(personId: String) : Promise<People | null> {
+    var userId = JellyfinApi.getInstance().userId;
+
+    var query = "/Users/" + userId + "/Items/" + personId;
+
+    const res: any = await JellyfinApi.getInstance().api.get(query);
+
+    if (res.data) {
+        return new People(res.data.Id, res.data.Name, res.data.ImageTags.Primary, res.data.Overview, new Date(res.data.PremiereDate), res.data.ProductionLocations[0], res.data.ProviderIds);
+    }
+
+    return null;
+}
+
+export { getLatest, getResume, getStudio, ItemType, getItemDetails, getRecommendations, getPeopleDetails, getPeopleMedia };

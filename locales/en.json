@@ -6,5 +6,6 @@
     "add_account": "Add account",
     "server_list_title": "Server list",
     "server_register_title": "Add server",
-    "server_URL": "Server URL"
+    "server_URL": "Server URL",
+    "fetching_data": "Fetching data..."
 }

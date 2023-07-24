@@ -20,7 +20,7 @@
             <MenuButton
               class="inline-flex items-center w-full justify-center rounded-md py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
-              <div class="w-10 h-10 rounded-full bg-white"></div>
+              <div class="w-10 h-10 rounded-full bg-white bg-cover" :style="{backgroundImage : `url(${imgLink})`}"></div>
               <ChevronDownIcon
                 class="-mr-1 h-8 w-8 text-violet-200 hover:text-violet-100"
                 aria-hidden="true"
@@ -75,8 +75,10 @@ import {
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import { ChevronDownIcon, ArrowLeftOnRectangleIcon } from "@heroicons/vue/20/solid";
 import { useAuthStore } from "@/stores/useAuth";
+import { useConfigStore } from "@/stores/useConfig";
 
 const authStore = useAuthStore();
+const configStore = useConfigStore();
 const localePath = useLocalePath();
 
 const showConfirmation = ref(false);
@@ -87,4 +89,8 @@ function logout() {
         authStore.storeLogout();
     }
 }
+
+const imgLink = computed(() => {
+    return `${configStore.selectedServerValue.url}/Users/${authStore.userIdValue}/Images/Primary?tag=${authStore.userValue.avatarId}`
+})
 </script>

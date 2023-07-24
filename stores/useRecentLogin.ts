@@ -8,17 +8,17 @@ export const useRecentLoginStore = defineStore("recentLogin", () => {
 
     const recentLoginsValue = computed(() => recentLogins.value);
 
-    const addRecentLogin = (pUsername: string, pAccountID: string, pAccessToken: string, pAvatarId: string, pServerId: string ) => {
+    const addRecentLogin = (pUser: User, pServerId: string ) => {
         const index = recentLogins.value.findIndex((recentLogin) => recentLogin.serverId === pServerId);
         if (index > -1) {
             // check if user already exists
-            const userIndex = recentLogins.value[index].users.findIndex((user) => user.accountID === pAccountID);
+            const userIndex = recentLogins.value[index].users.findIndex((user) => user.accountID === pUser.accountID);
             if (userIndex > -1) {
                 recentLogins.value[index].users.splice(userIndex, 1);
             }
-            recentLogins.value[index].users.push(new User(pUsername, pAccountID, pAccessToken, pAvatarId, pServerId));
+            recentLogins.value[index].users.push(pUser);
         } else {
-            recentLogins.value.push(new RecentLogin(pServerId, [new User(pUsername, pAccountID, pAccessToken, pAvatarId, pServerId)]));
+            recentLogins.value.push(new RecentLogin(pServerId, [pUser]));
         }
     };
 
