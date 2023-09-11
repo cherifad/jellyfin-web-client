@@ -40,7 +40,7 @@
         :spaceBetween="30"
         :modules="[SwiperAutoplay]"
         :slidesPerView="6"
-        :autoplay="{ delay: 2000, pauseOnMouseEnter: true }"
+        :autoplay="{ delay: 5000, pauseOnMouseEnter: true }"
         ref="swiperRef"
       >
         <swiper-slide v-for="cast in itemDetails.People" :key="cast.Id">
@@ -81,7 +81,7 @@
         :spaceBetween="30"
         :modules="[SwiperAutoplay]"
         :slidesPerView="4"
-        :autoplay="{ delay: 2000, pauseOnMouseEnter: true }"
+        :autoplay="{ delay: 6000, pauseOnMouseEnter: true }"
         ref="swiperRef"
       >
         <swiper-slide

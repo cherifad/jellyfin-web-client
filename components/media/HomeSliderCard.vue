@@ -13,7 +13,7 @@
           <PlayIcon class="h-6 w-6" />
           Play
         </button>
-        <NuxtLink :to="`/media/${slugify(title)}_${itemId}`"
+        <NuxtLink :to="localePath(`/media/${slugify(title)}_${itemId}`)"
           class="border-white flex gap-2 border-[.5px] rounded-full px-9 py-3 font-bold group">
           More
           <ArrowSmallRightIcon class="h-6 w-6 group-hover:translate-x-1 transition-transform" />
@@ -29,6 +29,8 @@ import { ref, computed, watch } from "vue";
 import { PlayIcon, ArrowSmallRightIcon } from "@heroicons/vue/24/solid";
 import slugify from "@sindresorhus/slugify";
 import { useConfigStore } from "@/stores/useConfig";
+
+const localePath = useLocalePath();
 
 const props = defineProps({
   backImage: {

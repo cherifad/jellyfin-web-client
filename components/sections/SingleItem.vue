@@ -18,7 +18,7 @@
         {{ itemFirstGenre }}
       </div>
     </div> -->
-    <NuxtLink :to="link" class="flex justify-between h-1/5 pt-3 cursor-pointer">
+    <NuxtLink :to="localePath(link)" class="flex justify-between h-1/5 pt-3 cursor-pointer">
       <h1 class="text-xl font-semibold">{{ itemTitle }}</h1>
       <ArrowSmallRightIcon class="h-6 w-6 group-hover:translate-x-1 transition-transform" />
     </NuxtLink>
@@ -31,6 +31,7 @@ import slugify from "@sindresorhus/slugify";
 import { useConfigStore } from "@/stores/useConfig";
 
 const config = useConfigStore();
+const localePath = useLocalePath();
 
 const props = defineProps({
   autoPlay: {

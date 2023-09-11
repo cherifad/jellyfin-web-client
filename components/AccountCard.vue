@@ -5,7 +5,7 @@
         <EllipsisVerticalIcon class="absolute top-0 right-0 w-6 h-6 cursor-pointer" />
         <div>
             <ImageBlock :src="imgLink" :alt="username + ' profile image'"
-                class="rounded-full w-24 h-24 shadow-sm shadow-black">
+                class="rounded-full w-24 h-24 shadow-sm shadow-black"/>
         </div>
         <p class="text-lg font-bold mt-3 text-center">{{ username }}</p>
     </div>

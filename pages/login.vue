@@ -2,7 +2,7 @@
   <!-- Login Page -->
   <div class="py-7 px-20 flex flex-col h-screen">
     <div class="flex flex-col items-center mt-10">
-      <h1 class="text-7xl font-light mb-4">Welcome back{{ configStore.serversCount > 0 ? ` to ${configStore.selectedServerValue.name}` : ''}}!</h1>
+      <h1 class="text-7xl font-light mb-4">{{ $t('welcome') }} {{ configStore.serversCount > 0 ? ` to ${configStore.selectedServerValue.name}` : ''}}!</h1>
     </div>
     <!-- Recent Logins -->
     <div class="flex flex-col items-center">
@@ -63,12 +63,12 @@
       <!-- Login Button -->
       <div class="w-1/4 mt-3">
         <button type="button" class="bg-black w-full py-3 rounded-xl text-white font-bold" @click="login()">
-          Login
+          {{ $t('login') }}
           <ArrowRightOnRectangleIcon class="h-5 w-5 inline-block" />
         </button>
         <button type="button" class="bg-red-500 mt-3 w-full py-3 rounded-xl text-white font-bold"
           @click="showServerChoiceModal = true">
-          Change server
+          {{ $t('server_change') }}
           <ArrowsRightLeftIcon class="h-5 w-5 inline-block" />
         </button>
       </div>
@@ -117,6 +117,7 @@ const form = ref({
   username: "",
   password: "",
 });
+
 const showPassword = ref(false);
 const rememberMe = ref(false);
 const showLostPasswordModal = ref(false);
@@ -141,7 +142,6 @@ const canLogin = computed(() => {
 watch(() => configStore.serversCount, (count) => {
   // show new server modal if no server is configured
   if (!showNewServerModal.value && count <= 0) {
-    console.log("show");
     showNewServerModal.value = true;
   }
 });

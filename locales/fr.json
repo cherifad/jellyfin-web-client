@@ -4,8 +4,11 @@
     "welcome": "Bienvenue",
     "add_to_favorite": "Ajouter aux favoris",
     "add_account": "Ajouter un compte",
+    "add_server": "Ajouter le serveur",
     "server_list_title": "Liste des serveurs",
     "server_register_title": "Ajouter un serveur",
     "server_URL": "URL du serveur",
+    "invalid_server_URL": "Serveur inexistant",
+    "server_change": "Changer de serveur",
     "fetching_data": "Récupération des données..."
 }
